@@ -1,0 +1,96 @@
+{
+  "layer": "bot",
+  "spacing": 0,
+  "height": 0,
+  "margin-bottom": 0,
+  "margin-top": 0,
+  "position": "top",
+  "margin-right": 0,
+  "margin-left": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "mpris",
+    "network",
+    "battery",
+    "pulseaudio",
+    "tray",
+  ],
+"mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{player_icon} Paused",
+    "player-icons": {
+        "default": "▶",
+    },
+    "status-icons": {
+        "playing": "▶",
+        "paused": "⏸"
+    },
+    "max-length": 50,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+},
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "tooltip": false
+  },
+  "tray": {
+    "spacing": 10,
+    "tooltip": false
+  },
+  "clock": {
+    "format": "󰅐 {:%H:%M}",
+    "tooltip": true
+  },
+  "network": {
+    "format-wifi": " {bandwidthDownBits}",
+    "format-ethernet": " {bandwidthDownBits}",
+    "format-disconnected": "󰤮 No Network",
+    "interval": 5,
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "max-volume": 150,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-icons": [
+      "",
+      "",
+      " "
+    ],
+    "nospacing": 1,
+    "format-muted": " ",
+    "on-click": "qpwgraph",
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 10
+    },
+    "no-spacing": 1,
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄{capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-full": "󱈑 {capacity}%",
+    "format-icons": [
+      "󱊡",
+      "󱊢",
+      "󱊣"
+    ]
+  }
+}

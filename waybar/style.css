@@ -1,0 +1,118 @@
+* {
+  /* General taskbar font, I like maple mono ^-^*/
+  font-family: "JetbrainsMono Nerd Font", "Font Awesome 6 Free"; /* Added a fallback font */
+  border-radius: 8px; /* Corrected '8' to '8px' */
+  font-size: 16px;
+  padding: 0px;
+  background: transparent;
+}
+
+window#waybar {
+  /* This is the modern, correct way to set a solid background color */
+  background-color: #141216;
+  background: transparent;
+  border-radius: 14px;
+  padding: 0px;
+  border-style: none;
+}
+
+#battery,
+#network,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#pulseaudio {
+  background-color: #27232b; /* <-- FIXED */
+  margin: 6px;
+  margin-right: 0px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #d8cab8;
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#clock {
+  margin-right: 6px;
+}
+#mpris {
+    background-color: #27232b;/* Spotify Green */
+    color: #d8cab8; /* White text */
+    padding: 0 10px;
+    border-radius: 5px;
+    margin: 4px 4px;
+}
+#pulseaudio:hover {
+  background-color: #ac82e9; /* <-- FIXED */
+  color: #141216;
+  transition-duration: 120ms;
+}
+
+#custom-applauncher {
+  font-weight: bold;
+  transition-duration: 120ms;
+}
+#custom-applauncher:hover {
+  background-color: #ac82e9; /* <-- FIXED */
+  color: #141216;
+  transition-duration: 120ms;
+}
+
+#tray menu {
+  background-color: #141216;
+  color: #d8cab8;
+  padding: 4px;
+}
+#tray menu menuitem {
+  background-color: #27232b; /* <-- FIXED */
+  margin: 3px;
+  color: #d8cab8;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #27232b;
+}
+#tray menu menuitem:hover {
+  background-color: #27232b; /* <-- FIXED, was a gradient */
+  color: #ac82e9;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #d8cab8;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #8f56e1;
+}
+#workspaces button.focused {
+  color: #ac82e9;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: #ac82e9;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: #fcb167;
+}
+
+/* This section is now cleaner and easier to understand */
+#battery {
+  /* The default color is set by the general rule above (#27232b) */
+  color: #d8cab8;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: #1d2021;
+  background-color: #fc4649;
+}
