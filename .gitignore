@@ -1,0 +1,63 @@
+# ====================================================================
+# .gitignore for ~/.config (Strict Whitelist Approach)
+# ====================================================================
+
+# 1. Ignore absolutely everything by default
+/*
+
+# 2. Allow Git-related files and documentation
+!.gitignore
+!README.md
+
+# --------------------------------------------------------------------
+# Core Desktop & Tiling Window Manager
+# --------------------------------------------------------------------
+!hypr/
+!waybar/
+!autostart/
+!monitors.xml
+
+# --------------------------------------------------------------------
+# Terminals & Shell Tools
+# --------------------------------------------------------------------
+!kitty/
+!guake/
+!htop/
+!neofetch/
+!glow/
+
+# --------------------------------------------------------------------
+# Text Editors
+# --------------------------------------------------------------------
+!nvim/
+!init.vim
+
+# --------------------------------------------------------------------
+# System Theming & XDG Defaults
+# --------------------------------------------------------------------
+!gtk-3.0/
+!gtk-4.0/
+!fontconfig/
+!QtProject.conf
+!mimeapps.list
+!user-dirs.dirs
+!user-dirs.locale
+
+# --------------------------------------------------------------------
+# Audio & System Services
+# --------------------------------------------------------------------
+!pipewire/
+!wireplumber/
+!easyeffects/
+!pavucontrol.ini
+!systemd/
+
+# --------------------------------------------------------------------
+# Specific App Configs (Safe to track)
+# --------------------------------------------------------------------
+!config_files/
+!obs-studio/
+!mpv/
+!vlc/
+!chromium-flags.conf
+!xclicker.conf
